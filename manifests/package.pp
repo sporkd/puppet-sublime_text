@@ -15,7 +15,7 @@ define sublime_text_3::package($source, $branch = '') {
     $extra = "-b ${branch}"
   }
 
-  repository { "${sublime_text_3::config::packagedir}/${name}":
+  repository { "${sublime_text_3::config::packages_dir}/${name}":
     source => $source,
     extra  => $extra
   }

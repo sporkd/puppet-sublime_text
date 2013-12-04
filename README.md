@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/boxen/puppet-sublime_text.png?branch=master)](https://travis-ci.org/boxen/puppet-sublime_text)
 
-Install [Sublime Text](http://www.sublimetext.com//), a text-editor/IDE for Mac
+Install [Sublime Text](http://www.sublimetext.com), a text-editor/IDE for Mac
 
 Current Version: 3 Beta (Build 3047)
 ## Usage
@@ -14,6 +14,30 @@ sublime_text_3::package { 'Emmet':
 }
 ```
 
+### Packages Management
+
+You can manage Sublime Text 3 packages by the `sublime_text_3::package` class. Packages can be defined by using GitHub repository name or URL to .sublime-package file.
+
+#### GitHub repository name
+
+Package will be cloned from GitHub and installed into `Packages` directory.
+
+```puppet
+# install package named "Theme - Soda" from GitHub repository
+# will be stored in "Packages/Theme - Soda"
+sublime_text_3::package { 'Theme - Soda':
+  source => 'buymeasoda/soda-theme/'
+}
+```
+
+
 ## Required Puppet Modules
 
-None.
+* [boxen] >= 2.1.0
+* [repository] >= 2.2.0
+* [stdlib] >= 4.1.0
+
+
+[boxen]: https://github.com/boxen/puppet-boxen
+[repository]: https://github.com/boxen/puppet-repository
+[stdlib]: https://github.com/puppetlabs/puppetlabs-stdlib
