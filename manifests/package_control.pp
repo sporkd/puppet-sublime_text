@@ -6,6 +6,8 @@
 #     include sublime_text_3::package_control
 
 class sublime_text_3::package_control {
+  require sublime_text_3::config
+
   $src  = "https://sublime.wbond.net/Package%20Control.sublime-package"
   $dest = "${sublime_text_3::config::packages_dir}/Package Control"
 
