@@ -4,8 +4,18 @@
 # Usage:
 #
 #     include sublime_text_3::package_control
+
 class sublime_text_3::package_control {
-  sublime_text_3::package { 'Package Control':
-    source => 'https://sublime.wbond.net/Package%20Control.sublime-package'
+  $src  = "https://sublime.wbond.net/Package%20Control.sublime-package"
+  $dest = "${sublime_text_3::config::packages_dir}/Package Control"
+
+  exec{'wget package control':
+    command => "/opt/boxen/homebrew/bin/wget -q $src -O $dest",
+    creates => '$dest'
+  }
+
+  file{'$dest':
+    mode => 0755,
+    require => Exec['wget package control']
   }
 }
