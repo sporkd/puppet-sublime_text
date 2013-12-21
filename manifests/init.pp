@@ -16,7 +16,8 @@ class sublime_text_3 {
     $sublime_text_3::config::dir,
     $sublime_text_3::config::packages_dir,
     $sublime_text_3::config::user_packages_dir,
-    $sublime_text_3::config::installed_packages_dir
+    $sublime_text_3::config::installed_packages_dir,
+    $sublime_text_3::config::package_control_dir
   ]:
     ensure => directory
   }

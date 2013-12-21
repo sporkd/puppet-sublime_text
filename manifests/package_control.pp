@@ -9,11 +9,11 @@ class sublime_text_3::package_control {
   require sublime_text_3::config
 
   $src  = "https://sublime.wbond.net/Package%20Control.sublime-package"
-  $dest = "${sublime_text_3::config::packages_dir}/Package Control"
+  $dest = "${sublime_text_3::config::package_control_dir}"
 
   exec{'wget package control':
     command => "/opt/boxen/homebrew/bin/wget -q $src -O $dest",
-    creates => '$dest'
+    creates => $dest
   }
 
   file{'$dest':
