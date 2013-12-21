@@ -16,7 +16,7 @@ class sublime_text_3::package_control {
     creates => $dest
   }
 
-  file{'$dest':
+  file{$dest:
     mode => 0755,
     require => Exec['wget package control']
   }
