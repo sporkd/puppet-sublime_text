@@ -12,7 +12,7 @@ class sublime_text_3::package_control {
   $dest = "${sublime_text_3::config::package_control_dir}"
 
   exec{'wget package control':
-    command => "/opt/boxen/homebrew/bin/wget -q $src -O $dest",
+    command => "/opt/boxen/homebrew/bin/wget -q $src -O '$dest'",
     creates => $dest
   }
 
