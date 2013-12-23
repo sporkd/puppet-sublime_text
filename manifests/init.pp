@@ -7,7 +7,9 @@ class sublime_text_3 {
   include boxen::config
   require sublime_text_3::config
 
-  package { 'Sublime Text 3':
+  notify { '!!!!!!!!!!!!!!!!!!!!!! INSIDE sublime_text_3:init': }
+
+  package { 'Sublime Text':
     provider => 'appdmg',
     source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg';
   }
@@ -26,6 +28,6 @@ class sublime_text_3 {
     ensure  => link,
     target  => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
     mode    => '0755',
-    require => Package['Sublime Text 3'],
+    require => Package['Sublime Text'],
   }
 }
