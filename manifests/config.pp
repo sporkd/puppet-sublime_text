@@ -1,9 +1,9 @@
-# Internal: Prepare your system for Sublime Text 3 packages.
+# Internal: Prepare your system for Sublime Text packages.
 #
 # Examples
 #
-#   include sublime_text_3::config
-class sublime_text_3::config {
+#   include sublime_text::config
+class sublime_text::config {
   $dir        = "/Users/${::boxen_user}/Library/Application Support/Sublime Text 3"
   $packages_dir = "${dir}/Packages"
   $user_packages_dir = "${packages_dir}/User"

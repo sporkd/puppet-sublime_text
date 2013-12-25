@@ -4,19 +4,19 @@
 
 Install [Sublime Text](http://www.sublimetext.com), a text-editor/IDE for Mac
 
-Current Version: 3 Beta (Build 3047)
+Current Version: 3 Beta (Build 3059)
 ## Usage
 
 ```puppet
-include sublime_text_3
-sublime_text_3::package { 'Emmet':
+include sublime_text
+sublime_text::package { 'Emmet':
   source => 'sergeche/emmet-sublime'
 }
 ```
 
 ### Packages Management
 
-You can manage Sublime Text 3 packages by the `sublime_text_3::package` class. Packages can be defined by using GitHub repository name or URL to .sublime-package file.
+You can manage Sublime Text 3 packages by the `sublime_text::package` class. Packages can be defined by using GitHub repository name or URL to .sublime-package file.
 
 #### GitHub repository name
 
@@ -25,7 +25,7 @@ Package will be cloned from GitHub and installed into `Packages` directory.
 ```puppet
 # install package named "Theme - Soda" from GitHub repository
 # will be stored in "Packages/Theme - Soda"
-sublime_text_3::package { 'Theme - Soda':
+sublime_text::package { 'Theme - Soda':
   source => 'buymeasoda/soda-theme/'
 }
 ```

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'sublime_text_3' do
+describe 'sublime_text' do
   it do
     should contain_package('Sublime Text').with({
       :provider => 'appdmg',

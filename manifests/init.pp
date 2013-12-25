@@ -2,12 +2,10 @@
 #
 # Usage:
 #
-#     include sublime_text_3
-class sublime_text_3 {
+#     include sublime_text
+class sublime_text {
   include boxen::config
-  require sublime_text_3::config
-
-  notify { '!!!!!!!!!!!!!!!!!!!!!! INSIDE sublime_text_3:init': }
+  require sublime_text::config
 
   package { 'Sublime Text':
     provider => 'appdmg',
@@ -15,11 +13,11 @@ class sublime_text_3 {
   }
 
   file { [
-    $sublime_text_3::config::dir,
-    $sublime_text_3::config::packages_dir,
-    $sublime_text_3::config::user_packages_dir,
-    $sublime_text_3::config::installed_packages_dir,
-    $sublime_text_3::config::package_control_dir
+    $sublime_text::config::dir,
+    $sublime_text::config::packages_dir,
+    $sublime_text::config::user_packages_dir,
+    $sublime_text::config::installed_packages_dir,
+    $sublime_text::config::package_control_dir
   ]:
     ensure => directory
   }
