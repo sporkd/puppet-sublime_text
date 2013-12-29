@@ -5,11 +5,11 @@ describe 'sublime_text::package' do
   let(:params) { {:source => 'https://github.com/foo/bar'} }
   let(:facts) do
     {
-      :luser      => 'testuser',
+      :boxen_user => 'testuser',
       :boxen_home => '/opt/boxen',
     }
   end
-  let(:package_dir) { "/Users/#{facts[:luser]}/Library/Application Support/Sublime Text/Packages" }
+  let(:package_dir) { "/Users/#{facts[:boxen_user]}/Library/Application Support/Sublime Text/Packages" }
 
   # FIXME - rspec-puppet should properly stub facts instead of this hack.
   before :each do

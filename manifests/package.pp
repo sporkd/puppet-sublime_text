@@ -2,6 +2,7 @@
 #
 # namevar - The name of the package.
 # source  - The location of the git repository containing the package.
+# branch  - Name of the branch in git repository to checkout
 #
 # Examples
 #

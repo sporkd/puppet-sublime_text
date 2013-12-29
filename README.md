@@ -9,6 +9,7 @@ Current Version: 3 Beta (Build 3059)
 
 ```puppet
 include sublime_text
+include sublime_text::package_control
 sublime_text::package { 'Emmet':
   source => 'sergeche/emmet-sublime'
 }
