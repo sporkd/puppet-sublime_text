@@ -8,13 +8,11 @@ class sublime_text::config {
   $packages_dir = "${dir}/Packages"
   $user_packages_dir = "${packages_dir}/User"
   $installed_packages_dir = "${dir}/Installed Packages"
-  $package_control_dir = "${packages_dir}/Package Control"
 
   anchor { [
     $dir,
     $packages_dir,
     $user_packages_dir,
-    $installed_packages_dir,
-    $package_control_dir
+    $installed_packages_dir
   ]: }
 }

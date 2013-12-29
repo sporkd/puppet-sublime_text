@@ -9,7 +9,7 @@ class sublime_text::package_control {
   require sublime_text::config
 
   $src  = "https://sublime.wbond.net/Package%20Control.sublime-package"
-  $dest = "${sublime_text::config::package_control_dir}"
+  $dest = "${sublime_text::config::installed_packages_dir}/Package Control.sublime-package"
 
   exec{'wget package control':
     command => "/opt/boxen/homebrew/bin/wget -q $src -O '$dest'",
